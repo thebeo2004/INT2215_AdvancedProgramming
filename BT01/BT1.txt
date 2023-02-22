@@ -1,0 +1,15 @@
+A.
+1. isA = true nếu 90 <= grade && grade <= 100
+Ngược lại isA = false.
+2. x = 0
+3. Tràn số.
+4. False
+5. Chương trình complier được, nhưng khi run code thì báo lỗi.
+6. Fail với lệnh a.
+Còn với x -> Tùy chương trình dịch.
+7. 0; 0.75; 0.75; 0.75
+8. Chương trình báo lỗi rằng tên biến đã được định nghĩa trước đó.
+9.
+10.
+11. Sai ở (5/9) = 0.
+12. Here
