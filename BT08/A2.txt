@@ -1,0 +1,13 @@
+a) Chạy ổn định. 
+Có nhận xét là để in ra địa chỉ của từng vị trí -> Ép kiểu sang (void*)
+    -> Giải thích: Thì trong char thì gọi hàm cout như vậy nó sẽ ngầm hiểu in ra hết phần giá trị mà nó trỏ tới, cho đến khi gặp '\0'
+        -> Với việc chuyển sang (void*) -> Xác nhận rằng đó là 1 con trỏ, và chỉ yêu cầu in ra địa chỉ con trỏ đó trỏ tới
+
+- Khi thay bằng 1 mảng số nguyên, Ex: int a[5], và trỏ *cp = a;
+    -> Khi đó thì cp và (void*) cp có ý nghĩa tương đương nhau.
+
+b) Tính được.
+Mỗi 1 biến int thì kích thước bộ nhớ sẽ là 4 byte.
+
+c) Tính được.
+Mỗi 1 biến double thì kích thước bộ nhớ là 8 byte.

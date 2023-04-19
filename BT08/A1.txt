@@ -1,0 +1,4 @@
+Nhận xét: Địa chỉ của 2 biến là như nhau.
+    -> Giải thích: Trình biên dịch xếp 2 biến x, y ở cùng 1 địa chỉ: cùng tham số, cùng kiểu int, cùng kiểu trả về.
+        -> Khi chạy hàm f trước -> Xếp vào đỉnh stack. Sau khi chạy xong, giải phóng biến trong hàm.
+            -> Đến chạy hàm g, tiếp tục xếp vào đỉnh stack

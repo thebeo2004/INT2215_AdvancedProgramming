@@ -1,0 +1,31 @@
+Về bản chất, thì việc hoán đổi như trong code có sẵn thì nó cũng tương đương với việc hoán đổi số (vô tri)
+giải thích:
+
+void swap_pointers(char* x, char* y)
+{
+   char *tmp;
+   tmp = x;
+   x = y;
+   y = tmp;
+}
+int main()
+{
+   char a[] = "I should print second";
+   char b[] = "I should print first";
+
+   char *s1 = a;
+   char *s2 = b;
+   swap_pointers(s1,s2);
+   cout << "s1 is " << s1 << endl;
+   cout << "s2 is " << s2 << endl;
+   return 0;
+}
+
+ => Có thể thấy: s1, s2, x, y là các biến cùng bậc. Khi mà truyền s1, s2 vào swap_pointers thì nó chỉ tương đương với việc
+là khi đó trong 2 paramaters x, y: x trỏ tới a[] (đồng bậc với s1), y trỏ tới b[] -> Việc hoán đổi chỉ thay đổi ở x, y mà không làm ảnh hưởng gì s1, s2
+
+    <=> Liên hệ với 1 lỗi đã từng mắc phải với Linked List: Có thể hiểu là con trỏ trỏ tới cái hộp, dù con trỏ ở hàm lập không gây ảnh hưởng đến con trỏ hàm chính (không liên nhau), xong việc đổi phần trong cái hộp sẽ gây ra thay đổi toàn cục.
+
+=> Cách giải quyết: giống như cách giải quyết khi hoán đổi 2 số thông thường
+    +) Truyền tham trị: thêm & <-> Cái được truyền vào chính là bản thân con trỏ đó (Cách đơn giản hơn)
+    +) Dùng đến bậc cao hơn (Hiểu nôm na là thay đổi cái bên trong cái hộp) -> Trỏ trực tiếp đến địa chỉ và thay đổi giá trị địa chỉ lưu giữ.
